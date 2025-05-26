@@ -1,0 +1,28 @@
+{
+  "name": "chatbot-docs-website",
+  "version": "1.0.0",
+  "description": "Documentation website for the Cloud Based Chatbot Generator Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [
+    "documentation",
+    "chatbot",
+    "ai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^13.0.0",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "dompurify": "^3.2.5",
+    "marked": "^15.0.11"
+  }
+}

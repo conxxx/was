@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Page Title -->
+    <title>Chatbot Platform Docs - System Architecture</title>
+    <!-- Add this line inside the <head> of ALL HTML files -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap CSS via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional: Add custom CSS file later if needed -->
+    <!-- <link href="css/custom.css" rel="stylesheet"> -->
+
+    <style>
+      /* Small CSS adjustments if needed */
+      body {
+        padding-top: 56px; /* Adjust if using fixed-top navbar */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1; /* Allows footer to stick to bottom */
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <!-- Navigation Bar (Bootstrap Navbar) -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Chatbot Platform Docs</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- Inside the <nav> in pages/architecture.html -->
+<!-- Inside the <nav> in pages/architecture.html -->
+    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Architecture</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/dashboard.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/widget.html">Widget</a> <!-- Added Link -->
+        </li>
+        <li class="nav-item"> <a class="nav-link" href="/pages/backend-api.html">Backend API</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="/pages/crawling-indexing.html">Crawling</a> </li>
+        <!-- Add more links later -->
+      </ul>
+          <!-- Optional: Add search or other elements here -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container mt-4 mb-5">
+      <!-- Page Specific Content Goes Here -->
+                  <!-- Page Specific Content Goes Here -->
+                  <div class="p-4 p-md-5 mb-4 bg-white rounded-3 shadow-sm">
+                    <div class="container-fluid">
+                        <h1 class="display-6 fw-bold mb-4">B. System Architecture</h1>
+      
+                        <p class="mb-3">
+                            The platform is designed with a modular, client–server architecture that separates the user-facing interface from backend processing.
+                        </p>
+      
+                        <h2 class="h5 mt-4 mb-3">Client Side Components:</h2>
+                        <ol class="list-group list-group-numbered list-group-flush mb-4">
+                            <li class="list-group-item">The website owner's dashboard for configuring the chatbot.</li>
+                            <li class="list-group-item">The chat widget embedded on the owner’s website for visitor interactions.</li>
+                        </ol>
+      
+                        <h2 class="h5 mt-4 mb-3">Server Side Components:</h2>
+                        <p class="mb-3">
+                            On the server side, a backend application handles all heavy processing – including website crawling, content indexing, query understanding, and response generation – and interacts with both a database and external AI services.
+                        </p>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item ps-0"><strong>Database:</strong> Stores website content (and their vector embeddings), chatbot configuration, and logs of Q&A interactions.</li>
+                            <li class="list-group-item ps-0"><strong>External APIs:</strong> Integrates with services like OpenAI (for LLM and embeddings) and others for Speech-to-Text or OCR.</li>
+                        </ul>
+      
+                        <h2 class="h5 mt-5 mb-3 text-center">Architecture Diagram</h2>
+                        <div class="text-center mb-4"> <!-- Centering the image -->
+                            <img src="/images/architecture-diagram.jpg" class="img-fluid rounded shadow-sm border" alt="System Architecture Diagram including Client Side, Server Side, Database and External APIs">
+                            <!-- Make sure the image path /images/architecture-diagram.png is correct -->
+                        </div>
+      
+                        <p class="text-muted text-center fst-italic mb-4"> <!-- Figure caption styling -->
+                            Figure: System architecture with client components (owner dashboard and site widget), backend server, database, and external AI services.
+                        </p>
+      
+                        <p>
+                            This modular setup ensures a clear separation of concerns: the client side handles UI/UX, while the server side handles data processing, storage, and integration with AI models.
+                        </p>
+                    </div>
+                  </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-secondary text-white">
+      <div class="container text-center">
+        <span class="text-white"
+          >© 2023 Your Company Name. All rights reserved.</span
+        >
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (includes Popper) via CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Optional: Add custom JS file later -->
+    <!-- <script src="js/script.js"></script> -->
+  </body>
+</html>

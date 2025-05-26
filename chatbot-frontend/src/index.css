@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Add any global base styles specific to your app below, if needed */
+
+/* --- Modern Audio Controls CSS (for ChatPage.jsx) --- */
+/* Note: Using Tailwind might be preferable for consistency, but adding plain CSS here for now */
+.modern-audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Spacing between elements */
+    padding: 6px 8px;
+    background-color: rgba(0, 0, 0, 0.05); /* Subtle background */
+    border-radius: 20px; /* Curvy container */
+    margin-top: 8px;
+    /* Use visibility/max-height for smoother transitions if needed, or just rely on conditional rendering */
+    /* opacity: 0; */
+    /* max-height: 0; */
+    /* overflow: hidden; */
+    /* transition: opacity 0.3s ease, max-height 0.3s ease, padding 0.3s ease; */
+}
+
+/* .modern-audio-controls.active { */
+    /* opacity: 1; */
+    /* max-height: 50px; */ /* Adjust as needed */
+    /* padding: 6px 8px; */ /* Restore padding */
+/* } */
+
+/* TODO: Add dark mode adjustments if the frontend has a dark mode */
+/* .dark .modern-audio-controls { */
+    /* background-color: rgba(255, 255, 255, 0.1); */
+/* } */
+
+.audio-button {
+    background: none;
+    border: none;
+    padding: 4px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 50%; /* Curvy buttons */
+    width: 28px; /* Consistent size */
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #7c3aed; /* Use primary color (adjust if using CSS vars) */
+    transition: background-color 0.2s ease;
+}
+
+.audio-button:hover:not(:disabled) {
+    background-color: rgba(0, 0, 0, 0.1); /* Subtle hover */
+}
+/* .dark .audio-button:hover:not(:disabled) { */
+    /* background-color: rgba(255, 255, 255, 0.2); */
+/* } */
+
+
+.audio-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.audio-button i {
+    font-size: 16px; /* Adjust icon size */
+    line-height: 1;
+}
+/* Spinner styling (if using Bootstrap spinner class) */
+.audio-button .spinner-border {
+    width: 1rem; /* Adjust size */
+    height: 1rem;
+    border-width: .2em;
+    color: #7c3aed; /* Match button color */
+}
+
+
+.stop-button {
+    color: #dc3545; /* Red for stop */
+}
+
+.time-display {
+    font-size: 0.75em;
+    color: #333; /* Adjust text color */
+    min-width: 30px; /* Prevent layout shifts */
+    text-align: center;
+}
+/* .dark .time-display { */
+    /* color: #eee; */
+/* } */
+
+
+.seek-bar-container {
+    flex-grow: 1; /* Take remaining space */
+    display: flex;
+    align-items: center;
+    height: 20px; /* Container height */
+}
+
+.seek-bar {
+    width: 100%;
+    height: 6px; /* Track height */
+    cursor: pointer;
+    appearance: none;
+    background: rgba(0, 0, 0, 0.1); /* Track background */
+    border-radius: 3px; /* Curvy track */
+    outline: none;
+    transition: opacity 0.2s;
+    accent-color: #7c3aed; /* Set accent color for thumb/progress */
+}
+/* .dark .seek-bar { */
+    /* background: rgba(255, 255, 255, 0.2); */
+/* } */
+
+
+.seek-bar:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* --- Seek Bar Thumb Styling (Cross-browser) --- */
+/* Optional: More specific thumb styling if accent-color isn't sufficient */
+/* .seek-bar::-webkit-slider-thumb { */
+    /* appearance: none; */
+    /* width: 14px; */ /* Thumb size */
+    /* height: 14px; */
+    /* background: #7c3aed; */ /* Thumb color */
+    /* border-radius: 50%; */ /* Curvy thumb */
+    /* cursor: pointer; */
+    /* margin-top: -4px; */ /* Adjust vertical alignment */
+/* } */
+
+/* .seek-bar::-moz-range-thumb { */
+    /* width: 14px; */
+    /* height: 14px; */
+    /* background: #7c3aed; */
+    /* border-radius: 50%; */
+    /* cursor: pointer; */
+    /* border: none; */ /* Remove default border */
+/* } */
+/* --- End Modern Audio Controls CSS --- */

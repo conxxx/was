@@ -1,0 +1,39 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# IDE Configuration
+.vscode/
+.idea/
+
+# Sensitive Files
+roo-code-*.json
+
+# Log Files
+*.log
+
+# Temporary Files
+*.tmp
+*.swp
+memory-bank/
+# Python Virtual Environment
+.venv/
+venv/
+*.roo
+# Node.js
+node_modules/
+chatbot-backend/migrations/versions/1c3b01d2ff79_add_subscription_and_authentication_.py
+chatbot-backend/migrations/versions/4a0d26e58cf5_add_index_operation_tracking_fields.py
+chatbot-backend/migrations/versions/7a3bcda3825c_add_vectoridmapping_table.py
+chatbot-backend/migrations/versions/7d4307640324_add_image_analysis_enabled_flag.py
+chatbot-backend/migrations/versions/69ac7567d375_add_summarization_settings_to_chatbot.py
+chatbot-backend/migrations/versions/333c6e3b96e0_add_api_key_to_chatbot_model.py
+chatbot-backend/migrations/versions/47820fca9613_add_source_identifier_to_vectoridmapping.py
+chatbot-backend/migrations/versions/5978832002cd_add_detailed_widget_customization_and_.py
+chatbot-backend/migrations/versions/21678654885f_initial_migration_add_user_and_chatbot_.py
+chatbot-backend/migrations/versions/b95e7bd163f1_add_launcher_text_to_chatbot.py
+chatbot-backend/migrations/versions/c5621f1d91d2_add_widget_customization_fields.py
+chatbot-backend/migrations/versions/e6c28445ae49_add_logo_path_to_chatbot_model.py
+chatbot-backend/migrations/versions/ed046e7776dd_add_source_document_language_to_chatbot.py
+memory-bank/.gitignore
+chatbot-backend/.gitignore

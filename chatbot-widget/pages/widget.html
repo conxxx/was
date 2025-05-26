@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Page Title -->
+    <!-- Add this line inside the <head> of ALL HTML files -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>Chatbot Platform Docs - Chat Widget</title>
+    <!-- Bootstrap CSS via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional: Add custom CSS file later if needed -->
+    <!-- <link href="css/custom.css" rel="stylesheet"> -->
+
+    <style>
+      /* Small CSS adjustments if needed */
+      body {
+        padding-top: 56px; /* Adjust if using fixed-top navbar */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1; /* Allows footer to stick to bottom */
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <!-- Navigation Bar (Bootstrap Navbar) -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Chatbot Platform Docs</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- Inside the <nav> in pages/widget.html -->
+          <!-- Inside the <nav> in index.html -->
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/architecture.html"
+                >Architecture</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/widget.html">Widget</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/backend-api.html">Backend API</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/crawling-indexing.html"
+                >Crawling</a
+              >
+            </li>
+            <!-- Add more links later -->
+          </ul>
+          <!-- Optional: Add search or other elements here -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container mt-4 mb-5">
+      <!-- Page Specific Content Goes Here -->
+      <div class="p-4 p-md-5 mb-4 bg-white rounded-3 shadow-sm">
+        <div class="container-fluid">
+          <h1 class="display-6 fw-bold mb-4">Embedded Chatbot Widget</h1>
+          <p class="fst-italic text-muted mb-4">
+            Part of: Client-Side Components
+          </p>
+
+          <p class="lead mb-4">
+            This is the front-end chat interface that appears on the owner's
+            website for <strong>Website Visitors</strong>. It's loaded via the
+            integration snippet provided in the dashboard.
+          </p>
+
+          <h2 class="h5 mt-4 mb-3">Appearance & Interaction:</h2>
+          <ul class="list-unstyled mb-4">
+            <!-- Using list-unstyled for cleaner look -->
+            <li class="mb-2">
+              <i class="bi bi-chat-dots-fill text-primary me-2"></i>Typically
+              appears as a chat icon or window.
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-keyboard-fill text-primary me-2"></i>Provides a
+              text input box for questions.
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-mic-fill text-primary me-2"></i>May include a
+              microphone button for voice input.
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-image-fill text-primary me-2"></i>May include an
+              upload option for images/screenshots.
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-lightbulb-fill text-primary me-2"></i>Designed to
+              be intuitive and unobtrusive (e.g., familiar chat bubble).
+            </li>
+          </ul>
+
+          <h2 class="h5 mt-4 mb-3">Functionality:</h2>
+          <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item">
+              Collects visitor input (text, voice, image) and sends it to the
+              backend server via API call (REST/WebSocket).
+            </li>
+            <li class="list-group-item">
+              Displays the AI's answer received from the backend.
+            </li>
+            <li class="list-group-item">
+              Runs entirely in the visitor's browser (client-side) for
+              responsiveness.
+            </li>
+            <li class="list-group-item">
+              Handles voice capture (e.g., using Web Speech API) and image
+              uploads locally if features are enabled.
+            </li>
+            <li class="list-group-item">
+              Allows anonymous interaction – no visitor login required (session
+              tracked internally).
+            </li>
+            <li class="list-group-item">
+              Can handle follow-up actions like language selection or feedback
+              submission.
+            </li>
+          </ul>
+
+          <div class="alert alert-info d-flex align-items-center" role="alert">
+            <!-- Bootstrap Alert -->
+            <i class="bi bi-info-circle-fill me-3 fs-4"></i>
+            <!-- Icon -->
+            <div>
+              The widget acts as the direct interaction point for website
+              visitors seeking information from the AI assistant.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Page Specific Content Goes Here -->
+      <div class="p-4 p-md-5 mb-4 bg-white rounded-3 shadow-sm">
+        <div class="container-fluid">
+          <h1 class="display-6 fw-bold mb-4">Voice Query Handler</h1>
+          <p class="fst-italic text-muted mb-4">
+            Part of: Server-Side Components
+          </p>
+
+          <p class="lead mb-4">
+            Handles spoken questions from visitors when voice support is
+            enabled, allowing interaction via voice instead of typing.
+          </p>
+
+          <h2 class="h5 mt-4 mb-3">Typical Workflow:</h2>
+          <div class="row">
+            <div class="col-md-8">
+              <ol class="list-group list-group-numbered mb-4">
+                <li class="list-group-item d-flex align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">1. Capture Audio (Client-Side)</div>
+                    The chat widget records audio input from the visitor using
+                    the browser's microphone.
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">2. Send Audio (Client-Side)</div>
+                    The recorded audio clip is sent to the backend server.
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">3. Transcribe Audio (Server-Side)</div>
+                    The server uses an external Speech-To-Text (STT) service
+                    (e.g., OpenAI Whisper, Google Cloud Speech) to convert the
+                    audio into text.
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">4. Process as Text</div>
+                    The resulting text query enters the standard
+                    <a href="/pages/backend-api.html"
+                      >Query Processing & RAG Pipeline</a
+                    >.
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">5. Deliver Text Answer</div>
+                    Retrieval and answer generation proceed as normal. The final
+                    answer is delivered back to the widget as text.
+                  </div>
+                </li>
+              </ol>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-primary">
+                <div class="card-body text-primary">
+                  <h5 class="card-title">
+                    <i class="bi bi-mic-fill me-2"></i>Accessibility
+                  </h5>
+                  <p class="card-text">
+                    Provides an alternative input method, making the chatbot
+                    more accessible for users who prefer or need to speak rather
+                    than type.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-info mt-3">
+                <div class="card-body text-info-emphasis">
+                  <h5 class="card-title">
+                    <i class="bi bi-browser-chrome me-2"></i>Client-Side Option
+                  </h5>
+                  <p class="card-text small">
+                    Transcription can potentially be done client-side using the
+                    browser's Web Speech API to reduce server load (sending only
+                    text).
+                  </p>
+                </div>
+              </div>
+              <div class="card border-secondary mt-3">
+                <div class="card-body text-secondary">
+                  <h5 class="card-title">
+                    <i class="bi bi-volume-up-fill me-2"></i>Enhancement
+                  </h5>
+                  <p class="card-text small">
+                    Optionally, the client widget could use Text-To-Speech (TTS)
+                    in the browser to read the text answer aloud.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End row -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-secondary text-white">
+      <div class="container text-center">
+        <span class="text-white"
+          >© 2023 Your Company Name. All rights reserved.</span
+        >
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (includes Popper) via CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Optional: Add custom JS file later -->
+    <!-- <script src="js/script.js"></script> -->
+  </body>
+</html>

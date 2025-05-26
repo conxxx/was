@@ -1,0 +1,70 @@
+# requirements.txt
+Flask>=2.0
+Flask-SQLAlchemy>=3.0
+Flask-Migrate>=4.0
+# psycopg2-binary   # Or appropriate DB driver if not using PostgreSQL (e.g., mysqlclient). For SQLite, it's built-in. (Removed - Unused)
+python-dotenv>=0.20
+google-cloud-aiplatform <2.0.0,>=1.18.0 # Required for multimodal Gemini models (Removed - Unused)
+google-cloud-storage>=2.5   # Adjust version as needed
+google-cloud-speech>=2.20 # Add back for STT, adjust version as needed
+google-cloud-texttospeech>=2.14 # Adjust version as needed
+Flask-Cors>=3.0             # For enabling Cross-Origin Resource Sharing
+uuid                   # Built-in, but good to note
+# Add other dependencies from your original scripts later if needed:
+# aiohttp, beautifulsoup4, aiolimiter, chardet, pdfminer.six, python-docx# requirements.txt
+# ... (Flask, SQLAlchemy, etc.)
+# aiohttp>=3.8 (Removed - Unused)
+beautifulsoup4>=4.10
+lxml # Often recommended as a faster parser for BeautifulSoup and ElementTree
+# requirements.txt
+# ... (Flask, SQLAlchemy, Flask-Cors, google-cloud-*, aiohttp, beautifulsoup4, lxml etc.)
+python-docx>=1.0 # Check latest version
+pdfminer.six>=20221105 # Check latest version
+chardet>=3.0
+werkzeug # Usually installed with Flask, needed for secure_filename
+requests
+
+# Authentication-related packages
+Flask-Login>=0.6.2
+Flask-JWT-Extended>=4.5.2
+Flask-Bcrypt>=1.0.1
+# authlib>=1.2.0 (Removed - Unused)
+itsdangerous>=2.1.2
+# google-auth>=2.22.0 (Removed - Unused)
+PyJWT>=2.7.0
+# cryptography>=41.0.3 (Removed - Unused)
+
+# Task Queue
+celery>=5.3 # Check for latest stable version if needed
+redis>=5.0  # Check for latest stable version if needed
+
+# API Security
+Flask-Limiter>=3.0 # Check for latest stable version
+
+# Email
+Flask-Mail>=0.9 # Check for latest stable version
+
+# Audio Processing
+pydub
+Pillow # Required for backend image validation
+
+# Summarization Feature Dependencies
+html5lib
+validators
+langdetect # For language detection
+googletrans # For translation (RC version recommended)
+# google-cloud-translate # No longer used directly here
+# transformers # Replaced by Gemini for summarization
+# torch # Replaced by Gemini for summarization
+google-generativeai>=0.4.0 # Added for Gemini API access
+tiktoken
+# blobfile (Removed - Unused)
+google-cloud-translate
+
+Flask-CORS
+
+langchain-text-splitters
+
+rank_bm25>=0.2.2
+
+sentence-transformers
